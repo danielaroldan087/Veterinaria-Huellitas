@@ -56,4 +56,22 @@ Thumbs.db
 
 # Configuración local
 .vscode/
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Variables de entorno
+.env
+**/.env
+.env.*
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Archivos generados
+dist/
+**/dist/
+
+# Respaldos locales
+respaldo-integracion/
 
