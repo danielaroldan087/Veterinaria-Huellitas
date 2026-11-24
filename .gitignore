@@ -33,3 +33,27 @@ server/.env
 client/.env
 .env.local
 dist/
+
+
+# Dependencias
+node_modules/
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Archivos compilados
+dist/
+build/
+
+# Logs
+*.log
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+
+# Configuración local
+.vscode/
+
