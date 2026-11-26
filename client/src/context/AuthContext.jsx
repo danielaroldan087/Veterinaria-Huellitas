@@ -2,6 +2,7 @@
 import {
   createContext,
   useContext,
+  useCallback,
   useState
 } from "react";
 
@@ -14,13 +15,8 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   
-  const [usuario, setUsuario] = useState({
-    nombre: "Sofía Ramírez",
-    correo: "sofia.ramirez@huellitas.pe",
-    rol: "recepcionista",
-    sede: "Miraflores"
-  });
-  const [token, setToken] = useState("token-prueba-recepcionista");
+  const [usuario, setUsuario] = useState(null);
+  const [token, setToken] = useState(null);
 
   async function login(correo, password) {
     const sesion = await iniciarSesion(correo, password);
@@ -45,10 +41,10 @@ export function AuthProvider({ children }) {
     };
   }
 
-  function logout() {
+  const logout = useCallback(() => {
     setUsuario(null);
     setToken(null);
-  }
+  }, []);
 
   return (
     <AuthContext.Provider
@@ -57,6 +53,7 @@ export function AuthProvider({ children }) {
         token,
         autenticado: Boolean(usuario && token),
         login,
+        actualizarUsuario: datos => setUsuario(prev => ({ ...prev, ...datos })),
         logout
       }}
     >

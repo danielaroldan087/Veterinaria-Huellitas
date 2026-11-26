@@ -206,9 +206,10 @@ export async function crearAtencion(req, res) {
     });
   }
 
-  const cliente = await pool.connect();
+  let cliente;
 
   try {
+    cliente = await pool.connect();
     await cliente.query("BEGIN");
 
     const mascota = await cliente.query(
@@ -323,7 +324,7 @@ export async function crearAtencion(req, res) {
 
   } catch (error) {
     try {
-      await cliente.query("ROLLBACK");
+      if (cliente) await cliente.query("ROLLBACK");
     } catch (e) {
       console.error("Error al revertir:", e.message);
     }
@@ -350,7 +351,7 @@ export async function crearAtencion(req, res) {
     });
 
   } finally {
-    cliente.release();
+    cliente?.release();
   }
 }
 

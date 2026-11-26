@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, Navigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import LoginVeterinariaImg from "../assets/LoginVeterinaria.png";
-import "./Login.css";
+import "./login.css";
 
 const rutasPorRol = {
   administrador: "/administrador",
@@ -11,9 +11,9 @@ const rutasPorRol = {
 };
 
 export default function Login() {
-  const [correo, setCorreo] = useState("");
+  const [correo, setCorreo] = useState(() => localStorage.getItem("huellitas_recordar_correo") || "");
   const [password, setPassword] = useState("");
-  const [recordarme, setRecordarme] = useState(false);
+  const [recordarme, setRecordarme] = useState(() => Boolean(localStorage.getItem("huellitas_recordar_correo")));
   const [error, setError] = useState("");
   const [avisoRecuperacion, setAvisoRecuperacion] = useState("");
   const [cargando, setCargando] = useState(false);

@@ -1,8 +1,12 @@
+import { apiRequest } from "../services/api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./RecuperarPassword.css";
 
 export default function RecuperarPassword() {
+  const [token] = useState(() => new URLSearchParams(window.location.hash.slice(1)).get("token") || "");
+  const [busy,setBusy]=useState(false);
+  useEffect(()=>{if(token)window.history.replaceState(null,"",window.location.pathname);},[token]);
   // Paso 1: Solicitar enlace
   const [correo, setCorreo] = useState("");
   const [errorCorreo, setErrorCorreo] = useState("");
@@ -35,7 +39,7 @@ export default function RecuperarPassword() {
   const contraseñasCoinciden =
     nuevaPassword.length > 0 && nuevaPassword === confirmarPassword;
 
-  function manejarSolicitarEnlace(evento) {
+  async function manejarSolicitarEnlace(evento) {
     evento.preventDefault();
     setErrorCorreo("");
 
@@ -44,16 +48,16 @@ export default function RecuperarPassword() {
       return;
     }
 
-    setEnlaceEnviado(true);
-    setSegundosRestantes(45);
+    setBusy(true);
+    try { await apiRequest("/auth/recuperacion/solicitar", {method:"POST",body:JSON.stringify({correo})}); setEnlaceEnviado(true); setSegundosRestantes(45); } catch(e){setErrorCorreo(e.message);} finally{setBusy(false);}
   }
 
   function manejarReenviarEnlace() {
     if (segundosRestantes > 0) return;
-    setSegundosRestantes(45);
+    manejarSolicitarEnlace({preventDefault(){}});
   }
 
-  function manejarRestablecerPassword(evento) {
+  async function manejarRestablecerPassword(evento) {
     evento.preventDefault();
     setErrorPassword("");
     setMensajePassword("");
@@ -70,11 +74,9 @@ export default function RecuperarPassword() {
       return;
     }
 
-    setMensajePassword(
-      "Contraseña actualizada correctamente. Ya puedes iniciar sesión con tu nueva clave."
-    );
-    setNuevaPassword("");
-    setConfirmarPassword("");
+    if(!token){setErrorPassword("Abre el enlace recibido por correo.");return;}
+    setBusy(true);
+    try { await apiRequest("/auth/recuperacion/restablecer",{method:"POST",body:JSON.stringify({token,nueva:nuevaPassword})}); setMensajePassword("Contraseña actualizada. Ya puedes iniciar sesión."); setNuevaPassword("");setConfirmarPassword(""); } catch(e){setErrorPassword(e.message);} finally{setBusy(false);}
   }
 
   const tiempoFormateado = `00:${String(segundosRestantes).padStart(2, "0")}`;
@@ -151,7 +153,7 @@ export default function RecuperarPassword() {
                 </p>
               )}
 
-              <button type="submit" className="recover-primary-btn">
+              <button type="submit" disabled={busy} className="recover-primary-btn">
                 <span aria-hidden="true">➤</span>
                 <span>Enviar enlace de recuperación</span>
               </button>
@@ -199,7 +201,7 @@ export default function RecuperarPassword() {
               type="button"
               className="recover-outline-btn"
               onClick={manejarReenviarEnlace}
-              disabled={!enlaceEnviado || segundosRestantes > 0}
+              disabled={busy || !enlaceEnviado || segundosRestantes > 0}
             >
               Reenviar enlace · {tiempoFormateado}
             </button>
@@ -217,7 +219,7 @@ export default function RecuperarPassword() {
               <p className="recover-step-label">Paso 3 · Enlace verificado</p>
             </div>
 
-            <span className="recover-valid-pill">Enlace válido</span>
+            <span className="recover-valid-pill">{token ? "Enlace recibido · pendiente de validación" : "Abre el enlace de tu correo"}</span>
 
             <form className="recover-form" onSubmit={manejarRestablecerPassword} noValidate>
               <label htmlFor="new-password">Nueva contraseña *</label>
@@ -264,7 +266,7 @@ export default function RecuperarPassword() {
                 </p>
               )}
 
-              <button type="submit" className="recover-primary-btn">
+              <button type="submit" disabled={busy || !token || Boolean(mensajePassword)} className="recover-primary-btn">
                 <span aria-hidden="true">🔒</span>
                 <span>Restablecer contraseña</span>
               </button>

@@ -9,7 +9,7 @@ import {
 
 import {
   verificarToken,
-  permitirRoles
+  permitirRoles, exigirPermiso
 } from "../middlewares/authMiddleware.js";
 
 const router = Router();
@@ -20,20 +20,20 @@ router.use(verificarToken);
 router.get(
   "/",
   permitirRoles("administrador", "veterinario"),
-  obtenerInformes
+  exigirPermiso("informes.generar"), obtenerInformes
 );
 
 router.get(
   "/:id",
   permitirRoles("administrador", "veterinario"),
-  obtenerInformePorId
+  exigirPermiso("informes.generar"), obtenerInformePorId
 );
 
 // Solo veterinarios generan informes
 router.post(
   "/",
   permitirRoles("veterinario"),
-  crearInforme
+  exigirPermiso("informes.generar"), crearInforme
 );
 
 export default router;
