@@ -29,7 +29,9 @@ export async function obtenerInformes(req, res) {
          ON m.id_propietario = p.id_propietario
        JOIN usuarios u
          ON i.id_generador = u.id_usuario
-       ORDER BY i.fecha_generacion DESC, i.id_informe DESC`
+       WHERE ($1::boolean OR a.id_veterinario = $2)
+       ORDER BY i.fecha_generacion DESC, i.id_informe DESC`,
+      [req.usuario.rol === "administrador", req.usuario.id_usuario]
     );
 
     return res.json({
@@ -78,8 +80,9 @@ export async function obtenerInformePorId(req, res) {
          ON m.id_propietario = p.id_propietario
        JOIN usuarios u
          ON i.id_generador = u.id_usuario
-       WHERE i.id_informe = $1`,
-      [id]
+       WHERE i.id_informe = $1
+         AND ($2::boolean OR a.id_veterinario = $3)`,
+      [id, req.usuario.rol === "administrador", req.usuario.id_usuario]
     );
 
     if (resultado.rowCount === 0) {

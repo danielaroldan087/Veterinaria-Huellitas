@@ -14,8 +14,8 @@ export default function LayoutRecepcion({
   const { usuario, logout } = useAuth();
   const navigate = useNavigate();
 
-  const nombreUsuario = usuario?.nombre || "Sofía Ramírez";
-  const sedeAsignada = usuario?.sede || "Miraflores";
+  const nombreUsuario = usuario?.nombre || "Usuario";
+  const sedeAsignada = usuario?.sede || "No registrada";
 
   const [seccionLateral, setSeccionLateral] = useState(seccionActivaInicial);
 
@@ -93,7 +93,7 @@ export default function LayoutRecepcion({
             className={`recep-profile-link ${seccionLateral === "perfil" ? "is-active" : ""}`}
             onClick={() => {
               manejarClickSeccion("perfil");
-              navigate("/recepcionista");
+              navigate("/recepcionista/perfil");
             }}
           >
             Mi perfil y seguridad

@@ -11,7 +11,7 @@ import {
 
 import {
   verificarToken,
-  permitirRoles
+  permitirRoles, exigirPermiso
 } from "../middlewares/authMiddleware.js";
 
 const router = Router();
@@ -22,29 +22,29 @@ router.use(
   permitirRoles("administrador", "veterinario")
 );
 
-router.get("/", obtenerAtenciones);
+router.get("/", exigirPermiso("atenciones.ver"), obtenerAtenciones);
 
 router.get(
   "/mascota/:id",
-  obtenerHistorialMascota
+  exigirPermiso("atenciones.ver"), obtenerHistorialMascota
 );
 
 router.post(
   "/",
   permitirRoles("veterinario"),
-  crearAtencion
+  exigirPermiso("atenciones.crear"), crearAtencion
 );
 
 router.post(
   "/:id/diagnosticos",
   permitirRoles("veterinario"),
-  crearDiagnostico
+  exigirPermiso("atenciones.crear"), crearDiagnostico
 );
 
 router.post(
   "/:id/tratamientos",
   permitirRoles("veterinario"),
-  crearTratamiento
+  exigirPermiso("atenciones.crear"), crearTratamiento
 );
 
 

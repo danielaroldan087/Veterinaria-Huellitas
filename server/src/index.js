@@ -1,3 +1,7 @@
+import { errorMiddleware } from "./middlewares/errorMiddleware.js";
+import { verificarToken } from "./middlewares/authMiddleware.js";
+import recoveryRoutes from "./routes/recoveryRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 
 import mascotasRoutes from "./routes/mascotasRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -20,9 +24,11 @@ app.use(express.json());
 app.use("/api/propietarios", propietariosRoutes);
 app.use("/api/mascotas", mascotasRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/auth/recuperacion", recoveryRoutes);
 app.use("/api/citas", citasRoutes);
 app.use("/api/atenciones", atencionesRoutes);
 app.use("/api/informes", informesRoutes);
+app.use("/api/admin", adminRoutes);
 
 
 // Ruta principal
@@ -84,6 +90,8 @@ app.get("/api/roles", async (req, res) => {
   }
 });
 
+app.get('/api/configuracion',verificarToken,async(req,res)=>{try{const {rows}=await pool.query("SELECT clave,valor FROM configuracion_sistema WHERE clave IN ('nombre_veterinaria','duracion_cita_minutos','moneda')");res.json(Object.fromEntries(rows.map(r=>[r.clave,r.valor])));}catch(e){res.status(500).json({mensaje:'No se pudo consultar la configuración'});}});
+app.use(errorMiddleware);
 app.listen(PORT, () => {
   console.log(`Servidor Express corriendo en http://localhost:${PORT}`);
 });

@@ -8,7 +8,7 @@ import {
 
 import Login from "./pages/Login";
 import RecuperarPassword from "./pages/RecuperarPassword";
-import Panel from "./pages/Panel";
+import ModuloAdministrador from "./pages/administrador/ModuloAdministrador";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import { useAuth } from "./context/AuthContext";
 import PerfilRecepcion from "./pages/PerfilRecepcion";
@@ -23,6 +23,7 @@ import ProgramarCitaRecepcion from "./pages/ProgramarCitaRecepcion";
 import ModificarCancelarCitaRecepcion from "./pages/ModificarCancelarCitaRecepcion";
 import BuscadorGeneralRecepcion from "./pages/BuscadorGeneralRecepcion";
 
+import { InicioVeterinario, AgendaVeterinario, PacientesVeterinario, FichaVeterinario, HistorialVeterinario, AtencionesVeterinario, NuevaAtencion, DiagnosticoVeterinario, InformesVeterinario, NuevoInforme, VerInforme } from "./pages/veterinario/ModuloVeterinario";
 import "./App.css";
 
 const rutasPorRol = {
@@ -67,11 +68,12 @@ export default function App() {
         <Route path="/recuperar-password" element={<RecuperarPassword />} />
 
         <Route element={<ProtectedRoute rolesPermitidos={["administrador"]} />}>
-          <Route path="/administrador" element={<Panel />} />
+          <Route path="/administrador/*" element={<ModuloAdministrador />} />
         </Route>
 
         <Route element={<ProtectedRoute rolesPermitidos={["recepcionista"]} />}>
-          <Route path="/recepcionista" element={<PerfilRecepcion />} />
+          <Route path="/recepcionista" element={<InicioRecepcion />} />
+          <Route path="/recepcionista/perfil" element={<PerfilRecepcion />} />
           <Route path="/recepcionista/inicio" element={<InicioRecepcion />} />
           <Route path="/recepcionista/cambiar-password" element={<CambiarPasswordRecepcion />} />
           <Route path="/recepcionista/propietarios" element={<PropietariosRecepcion />} />
@@ -85,7 +87,18 @@ export default function App() {
         </Route>
 
         <Route element={<ProtectedRoute rolesPermitidos={["veterinario"]} />}>
-          <Route path="/veterinario" element={<Panel />} />
+          <Route path="/veterinario" element={<InicioVeterinario />} />
+          <Route path="/veterinario/agenda" element={<AgendaVeterinario />} />
+          <Route path="/veterinario/pacientes" element={<PacientesVeterinario />} />
+          <Route path="/veterinario/pacientes/:id" element={<FichaVeterinario />} />
+          <Route path="/veterinario/historial" element={<PacientesVeterinario historial />} />
+          <Route path="/veterinario/historial/:id" element={<HistorialVeterinario />} />
+          <Route path="/veterinario/atenciones" element={<AtencionesVeterinario />} />
+          <Route path="/veterinario/atenciones/nueva" element={<NuevaAtencion />} />
+          <Route path="/veterinario/atenciones/:id/diagnostico" element={<DiagnosticoVeterinario />} />
+          <Route path="/veterinario/informes" element={<InformesVeterinario />} />
+          <Route path="/veterinario/informes/nuevo" element={<NuevoInforme />} />
+          <Route path="/veterinario/informes/:id" element={<VerInforme />} />
         </Route>
 
         <Route path="/no-autorizado" element={

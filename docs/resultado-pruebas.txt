@@ -1,0 +1,345 @@
+TAP version 13
+# Error interno: Error
+# Subtest: Contraseña válida
+ok 1 - Contraseña válida
+  ---
+  duration_ms: 2.100407
+  type: 'test'
+  ...
+# Subtest: Contraseña corta
+ok 2 - Contraseña corta
+  ---
+  duration_ms: 0.084517
+  type: 'test'
+  ...
+# Subtest: Contraseña sin mayúscula
+ok 3 - Contraseña sin mayúscula
+  ---
+  duration_ms: 0.117978
+  type: 'test'
+  ...
+# Subtest: Contraseña sin minúscula
+ok 4 - Contraseña sin minúscula
+  ---
+  duration_ms: 0.070295
+  type: 'test'
+  ...
+# Subtest: Contraseña sin número
+ok 5 - Contraseña sin número
+  ---
+  duration_ms: 0.309555
+  type: 'test'
+  ...
+# Subtest: Contraseña nula
+ok 6 - Contraseña nula
+  ---
+  duration_ms: 0.059029
+  type: 'test'
+  ...
+# Subtest: Contraseña 72 bytes
+ok 7 - Contraseña 72 bytes
+  ---
+  duration_ms: 0.055343
+  type: 'test'
+  ...
+# Subtest: Contraseña 73 bytes
+ok 8 - Contraseña 73 bytes
+  ---
+  duration_ms: 0.044356
+  type: 'test'
+  ...
+# Subtest: Contraseña unicode excede bytes
+ok 9 - Contraseña unicode excede bytes
+  ---
+  duration_ms: 0.103415
+  type: 'test'
+  ...
+# Subtest: Versión de sesión estable y cambia con hash o secreto
+ok 10 - Versión de sesión estable y cambia con hash o secreto
+  ---
+  duration_ms: 0.639882
+  type: 'test'
+  ...
+# Subtest: Login válido limpia correo y excluye hash
+ok 11 - Login válido limpia correo y excluye hash
+  ---
+  duration_ms: 0.413932
+  type: 'test'
+  ...
+# Subtest: Rechaza usuario inexistente
+ok 12 - Rechaza usuario inexistente
+  ---
+  duration_ms: 0.954975
+  type: 'test'
+  ...
+# Subtest: Rechaza inactivo
+ok 13 - Rechaza inactivo
+  ---
+  duration_ms: 0.143506
+  type: 'test'
+  ...
+# Subtest: Rechaza clave incorrecta
+ok 14 - Rechaza clave incorrecta
+  ---
+  duration_ms: 0.191678
+  type: 'test'
+  ...
+# Subtest: Campos obligatorios no consultan BD
+ok 15 - Campos obligatorios no consultan BD
+  ---
+  duration_ms: 0.172069
+  type: 'test'
+  ...
+# Subtest: Propaga fallo de infraestructura
+ok 16 - Propaga fallo de infraestructura
+  ---
+  duration_ms: 0.138888
+  type: 'test'
+  ...
+# Subtest: Middleware devuelve error de negocio
+ok 17 - Middleware devuelve error de negocio
+  ---
+  duration_ms: 0.336235
+  type: 'test'
+  ...
+# Subtest: Middleware oculta detalles internos
+ok 18 - Middleware oculta detalles internos
+  ---
+  duration_ms: 1.800446
+  type: 'test'
+  ...
+# ◇ injected env (0) from .env
+# Subtest: Propietario sin datos
+ok 19 - Propietario sin datos
+  ---
+  duration_ms: 1.744883
+  type: 'test'
+  ...
+# Subtest: Propietario correo inválido
+ok 20 - Propietario correo inválido
+  ---
+  duration_ms: 0.213661
+  type: 'test'
+  ...
+# Subtest: Propietario documento demasiado largo
+ok 21 - Propietario documento demasiado largo
+  ---
+  duration_ms: 0.095053
+  type: 'test'
+  ...
+# Subtest: Propietario ID inválido
+ok 22 - Propietario ID inválido
+  ---
+  duration_ms: 0.23964
+  type: 'test'
+  ...
+# Subtest: Estado no booleano
+ok 23 - Estado no booleano
+  ---
+  duration_ms: 0.181823
+  type: 'test'
+  ...
+# Subtest: Mascota sin propietario
+ok 24 - Mascota sin propietario
+  ---
+  duration_ms: 0.292489
+  type: 'test'
+  ...
+# Subtest: Mascota peso negativo
+ok 25 - Mascota peso negativo
+  ---
+  duration_ms: 0.350016
+  type: 'test'
+  ...
+# Subtest: Mascota fecha imposible
+ok 26 - Mascota fecha imposible
+  ---
+  duration_ms: 0.567322
+  type: 'test'
+  ...
+# Subtest: Mascota esterilización inválida
+ok 27 - Mascota esterilización inválida
+  ---
+  duration_ms: 0.149705
+  type: 'test'
+  ...
+# Subtest: Mascota ID inválido
+ok 28 - Mascota ID inválido
+  ---
+  duration_ms: 0.263656
+  type: 'test'
+  ...
+# Subtest: Cita ID inválido
+ok 29 - Cita ID inválido
+  ---
+  duration_ms: 0.222564
+  type: 'test'
+  ...
+# Subtest: Confirmar ID inválido
+ok 30 - Confirmar ID inválido
+  ---
+  duration_ms: 1.092633
+  type: 'test'
+  ...
+# Subtest: Atención sin motivo
+ok 31 - Atención sin motivo
+  ---
+  duration_ms: 0.389275
+  type: 'test'
+  ...
+# Subtest: Atención peso inválido
+ok 32 - Atención peso inválido
+  ---
+  duration_ms: 0.145208
+  type: 'test'
+  ...
+# Subtest: Diagnóstico ID inválido
+ok 33 - Diagnóstico ID inválido
+  ---
+  duration_ms: 0.196685
+  type: 'test'
+  ...
+# Subtest: Tratamiento ID inválido
+ok 34 - Tratamiento ID inválido
+  ---
+  duration_ms: 0.293661
+  type: 'test'
+  ...
+# Subtest: Propietario creado con consulta parametrizada
+ok 35 - Propietario creado con consulta parametrizada
+  ---
+  duration_ms: 1.146183
+  type: 'test'
+  ...
+# Subtest: Documento duplicado devuelve 409
+ok 36 - Documento duplicado devuelve 409
+  ---
+  duration_ms: 0.20609
+  type: 'test'
+  ...
+# Subtest: Propietario inexistente devuelve 404
+ok 37 - Propietario inexistente devuelve 404
+  ---
+  duration_ms: 0.121743
+  type: 'test'
+  ...
+# Subtest: Mascota sin propietario activo es rechazada
+ok 38 - Mascota sin propietario activo es rechazada
+  ---
+  duration_ms: 0.113
+  type: 'test'
+  ...
+# Subtest: Mascota creada con propietario activo
+ok 39 - Mascota creada con propietario activo
+  ---
+  duration_ms: 0.124607
+  type: 'test'
+  ...
+# Subtest: Cita con horario invertido libera conexión
+ok 40 - Cita con horario invertido libera conexión
+  ---
+  duration_ms: 0.678951
+  type: 'test'
+  ...
+# Subtest: Cita en conflicto revierte transacción
+ok 41 - Cita en conflicto revierte transacción
+  ---
+  duration_ms: 0.222173
+  type: 'test'
+  ...
+# Subtest: Cita disponible confirma transacción
+ok 42 - Cita disponible confirma transacción
+  ---
+  duration_ms: 0.23332
+  type: 'test'
+  ...
+# Subtest: Atención sin mascota activa revierte transacción
+ok 43 - Atención sin mascota activa revierte transacción
+  ---
+  duration_ms: 0.195374
+  type: 'test'
+  ...
+# Subtest: Atención sin cita se registra
+ok 44 - Atención sin cita se registra
+  ---
+  duration_ms: 0.147512
+  type: 'test'
+  ...
+# Subtest: Atención de otro veterinario rechazada
+ok 45 - Atención de otro veterinario rechazada
+  ---
+  duration_ms: 0.350397
+  type: 'test'
+  ...
+# Subtest: Sin token devuelve 401
+ok 46 - Sin token devuelve 401
+  ---
+  duration_ms: 0.227031
+  type: 'test'
+  ...
+# Subtest: Rol no autorizado devuelve 403
+ok 47 - Rol no autorizado devuelve 403
+  ---
+  duration_ms: 0.232239
+  type: 'test'
+  ...
+# Subtest: Rol autorizado continúa
+ok 48 - Rol autorizado continúa
+  ---
+  duration_ms: 0.120902
+  type: 'test'
+  ...
+# Subtest: Permiso retirado devuelve 403
+ok 49 - Permiso retirado devuelve 403
+  ---
+  duration_ms: 0.211869
+  type: 'test'
+  ...
+# Subtest: Permiso asignado continúa
+ok 50 - Permiso asignado continúa
+  ---
+  duration_ms: 0.144877
+  type: 'test'
+  ...
+# Subtest: Token previo al cambio de contraseña es rechazado
+ok 51 - Token previo al cambio de contraseña es rechazado
+  ---
+  duration_ms: 4.65104
+  type: 'test'
+  ...
+(node:2989) ExperimentalWarning: glob is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+1..51
+# tests 51
+# suites 0
+# pass 51
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 200.324283
+# start of coverage report
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# file                        | line % | branch % | funcs % | uncovered lines
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# src                         |        |          |         | 
+#  controllers                |        |          |         | 
+#   atencionesController.js   |  39.62 |    43.48 |   66.67 | 6-48 52-146 178-182 189-193 246-252 267-270 272-278 309-315 326-352 369-371 373-374 376-395 400-421 443-462 466 468-473 475-498 508-529
+#   citasController.js        |  31.88 |    56.52 |   50.00 | 6-47 60-97 122-126 130 132-136 148-152 190-196 210-216 273-285 304-313 317-484 493-520 525-575 579-621
+#   mascotasController.js     |  34.33 |    72.34 |   50.00 | 6-42 55-86 129-133 143-147 181 248-268 272-449 452-501
+#   propietariosController.js |  40.66 |    74.42 |   66.67 | 6-37 62-74 107-111 175-182 186-311 319-323 331-350 356-362
+#  db.js                      |  95.83 |   100.00 |    0.00 | 21
+#  domain                     |        |          |         | 
+#   passwordPolicy.js         | 100.00 |   100.00 |  100.00 | 
+#   sessionVersion.js         | 100.00 |   100.00 |  100.00 | 
+#  errors                     |        |          |         | 
+#   AppError.js               | 100.00 |   100.00 |  100.00 | 
+#  middlewares                |        |          |         | 
+#   authMiddleware.js         |  70.51 |    78.57 |  100.00 | 37-41 45-62
+#   errorMiddleware.js        | 100.00 |    62.50 |  100.00 | 
+#  services                   |        |          |         | 
+#   loginService.js           | 100.00 |   100.00 |  100.00 | 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# all files                   |  39.17 |    65.50 |   67.44 | 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# end of coverage report
