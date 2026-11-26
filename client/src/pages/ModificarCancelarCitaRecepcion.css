@@ -1,0 +1,445 @@
+.mod-cita-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.mod-cita-title {
+  margin: 0 0 4px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #161f1a;
+}
+
+.mod-cita-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #67706b;
+}
+
+.mod-cita-btn-back {
+  padding: 9px 15px;
+  border-radius: 9px;
+  border: 1px solid #e0e2df;
+  background-color: #ffffff;
+  color: #242d28;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.mod-cita-btn-back:hover {
+  background-color: #f4f3ef;
+}
+
+/* Tarjeta superior del paciente */
+.mod-cita-patient-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.mod-cita-patient-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mod-cita-pet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #eef4ef;
+  color: #2f5d42;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.mod-cita-pet-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  color: #18211c;
+  margin-bottom: 2px;
+}
+
+.mod-cita-code-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b736e;
+}
+
+.mod-cita-pet-sub {
+  font-size: 0.74rem;
+  color: #7c8480;
+}
+
+.mod-cita-patient-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mod-cita-meta-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #848c88;
+  margin-bottom: 2px;
+}
+
+.mod-cita-meta-val {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+.mod-cita-patient-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.mod-cita-allergy-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #fdf0ec;
+  border: 1px solid #f4d6ce;
+  color: #b84a32;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.mod-cita-btn-ficha {
+  padding: 7px 13px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #ffffff;
+  color: #242d28;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mod-cita-btn-ficha:hover {
+  background-color: #f4f3ef;
+}
+
+/* Banda de cita actual */
+.mod-cita-current-bar {
+  background-color: #faf9f6;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.mod-cita-confirmed-pill {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background-color: #e6efe9;
+  color: #2f5d42;
+  font-size: 0.7rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.mod-cita-error {
+  margin: 0 0 14px;
+  font-size: 0.8rem;
+  color: #c93b3b;
+}
+
+.mod-cita-success {
+  margin: 0 0 14px;
+  font-size: 0.8rem;
+  color: #2f5d42;
+  font-weight: 600;
+}
+
+/* Grid de 2 columnas */
+.mod-cita-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.mod-cita-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.mod-cita-card-head h2 {
+  margin: 0 0 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+.mod-cita-card-head p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #7c8480;
+}
+
+.mod-cita-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mod-cita-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mod-cita-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mod-cita-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #26302b;
+}
+
+.mod-cita-field input,
+.mod-cita-field select,
+.mod-cita-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #ffffff;
+  font-size: 0.84rem;
+  color: #18211c;
+  font-family: inherit;
+}
+
+.mod-cita-field textarea {
+  resize: vertical;
+  min-height: 76px;
+}
+
+.mod-cita-field input::placeholder,
+.mod-cita-field textarea::placeholder {
+  color: #9ba39e;
+}
+
+.mod-cita-field input:focus,
+.mod-cita-field select:focus,
+.mod-cita-field textarea:focus {
+  outline: none;
+  border-color: #2f5d42;
+  box-shadow: 0 0 0 3px rgba(47, 93, 66, 0.12);
+}
+
+/* Aviso de nuevo horario disponible */
+.mod-cita-slot-ok {
+  background-color: #eef5f0;
+  border: 1px solid #d7e7dc;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mod-cita-slot-ok-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid #2f5d42;
+  color: #2f5d42;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.mod-cita-slot-ok strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1d3b2a;
+}
+
+.mod-cita-slot-ok p {
+  margin: 2px 0 0;
+  font-size: 0.74rem;
+  color: #3f614d;
+}
+
+/* Aviso de cancelación irreversible */
+.mod-cita-danger-notice {
+  background-color: #fdf0ec;
+  border: 1px solid #f4d6ce;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mod-cita-danger-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid #c25941;
+  color: #c25941;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.mod-cita-danger-notice strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8f3724;
+}
+
+.mod-cita-danger-notice p {
+  margin: 2px 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: #a44935;
+}
+
+.mod-cita-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.78rem;
+  color: #26302b;
+  cursor: pointer;
+}
+
+.mod-cita-checkbox input {
+  width: 15px;
+  height: 15px;
+  accent-color: #2f5d42;
+  cursor: pointer;
+}
+
+.mod-cita-card-footer {
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid #efeee9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mod-cita-btn-discard,
+.mod-cita-btn-keep {
+  padding: 9px 15px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #ffffff;
+  color: #242d28;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mod-cita-btn-discard:hover,
+.mod-cita-btn-keep:hover {
+  background-color: #f4f3ef;
+}
+
+.mod-cita-btn-save {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2f5d42;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.mod-cita-btn-save:hover {
+  background-color: #244a34;
+}
+
+.mod-cita-btn-cancel-confirm {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid #f2d2c9;
+  background-color: #fcece8;
+  color: #c25941;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.mod-cita-btn-cancel-confirm:hover {
+  background-color: #f8dfd8;
+}
+
+.mod-cita-audit-note {
+  margin: 16px 0 0;
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+@media (max-width: 1020px) {
+  .mod-cita-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mod-cita-patient-card,
+  .mod-cita-current-bar {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .mod-cita-header-row,
+  .mod-cita-two-cols,
+  .mod-cita-card-footer {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

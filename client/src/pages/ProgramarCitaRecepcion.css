@@ -1,0 +1,403 @@
+.prog-cita-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.prog-cita-title {
+  margin: 0 0 4px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #161f1a;
+}
+
+.prog-cita-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #67706b;
+}
+
+.prog-cita-btn-back {
+  padding: 9px 15px;
+  border-radius: 9px;
+  border: 1px solid #e0e2df;
+  background-color: #ffffff;
+  color: #242d28;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.prog-cita-btn-back:hover {
+  background-color: #f4f3ef;
+}
+
+/* Grid principal */
+.prog-cita-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.08fr) minmax(275px, 0.94fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.prog-cita-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.prog-cita-card h2 {
+  margin: 0 0 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+.prog-cita-card-header p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #7c8480;
+}
+
+/* Formulario */
+.prog-cita-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prog-cita-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.prog-cita-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prog-cita-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #26302b;
+}
+
+.prog-cita-field input,
+.prog-cita-field select,
+.prog-cita-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #ffffff;
+  font-size: 0.85rem;
+  color: #18211c;
+  font-family: inherit;
+}
+
+.prog-cita-field textarea {
+  resize: vertical;
+  min-height: 76px;
+}
+
+.prog-cita-field input:focus,
+.prog-cita-field select:focus,
+.prog-cita-field textarea:focus {
+  outline: none;
+  border-color: #2f5d42;
+  box-shadow: 0 0 0 3px rgba(47, 93, 66, 0.12);
+}
+
+/* Horarios disponibles */
+.prog-cita-slots-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.prog-cita-tz {
+  font-size: 0.7rem;
+  color: #848c88;
+}
+
+.prog-cita-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.prog-cita-slot {
+  padding: 8px 6px;
+  border-radius: 7px;
+  border: 1px solid #e2e4e1;
+  background-color: #f9f9f7;
+  color: #26302b;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.14s ease, border-color 0.14s ease;
+}
+
+.prog-cita-slot:hover:not(:disabled) {
+  background-color: #eef4f0;
+  border-color: #c8dcd0;
+}
+
+.prog-cita-slot.is-selected {
+  background-color: #2f5d42;
+  border-color: #2f5d42;
+  color: #ffffff;
+}
+
+.prog-cita-slot.is-disabled {
+  background-color: #f3f3f1;
+  color: #b4bab6;
+  border-color: #ecece9;
+  cursor: not-allowed;
+}
+
+.prog-cita-helper {
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+.prog-cita-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.8rem;
+  color: #26302b;
+  cursor: pointer;
+}
+
+.prog-cita-checkbox input {
+  width: 15px;
+  height: 15px;
+  accent-color: #2f5d42;
+  cursor: pointer;
+}
+
+.prog-cita-form-footer {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #efeee9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.prog-cita-required-note {
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+.prog-cita-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prog-cita-btn-cancel {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #f8f8f6;
+  color: #242d28;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prog-cita-btn-cancel:hover {
+  background-color: #efeee9;
+}
+
+.prog-cita-btn-confirm {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2f5d42;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.prog-cita-btn-confirm:hover {
+  background-color: #244a34;
+}
+
+.prog-cita-error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #c93b3b;
+}
+
+.prog-cita-success {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #2f5d42;
+  font-weight: 600;
+}
+
+/* Columna derecha */
+.prog-cita-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prog-cita-summary-title {
+  margin-bottom: 12px !important;
+}
+
+.prog-cita-pending-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background-color: #faeed4;
+  color: #9e6810;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.prog-cita-pet-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  color: #161f1a;
+  margin-bottom: 16px;
+}
+
+.prog-cita-summary-item {
+  margin-bottom: 12px;
+}
+
+.prog-cita-summary-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #848c88;
+  margin-bottom: 2px;
+}
+
+.prog-cita-summary-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+/* Avisos laterales */
+.prog-cita-available-banner {
+  background-color: #eef5f0;
+  border: 1px solid #d7e7dc;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prog-cita-available-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid #2f5d42;
+  color: #2f5d42;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.prog-cita-available-banner strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1d3b2a;
+}
+
+.prog-cita-available-banner p {
+  margin: 2px 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: #3f614d;
+}
+
+.prog-cita-allergy-banner {
+  background-color: #fdf0ec;
+  border: 1px solid #f4d6ce;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prog-cita-allergy-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid #c25941;
+  color: #c25941;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.prog-cita-allergy-banner strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8f3724;
+}
+
+.prog-cita-allergy-banner p {
+  margin: 2px 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: #a44935;
+}
+
+@media (max-width: 980px) {
+  .prog-cita-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .prog-cita-header-row,
+  .prog-cita-two-cols,
+  .prog-cita-form-footer {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .prog-cita-slots-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

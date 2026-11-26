@@ -1,0 +1,395 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  background-color: #f8f7f4;
+  color: #1f2924;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Columna izquierda */
+.login-visual {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.login-visual-overlay {
+  min-height: 100%;
+  padding: 28px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 34, 28, 0.36) 0%,
+    rgba(22, 34, 28, 0.14) 45%,
+    rgba(16, 26, 21, 0.78) 100%
+  );
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.login-brand-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.login-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.login-brand-sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.login-LoginVeterinaria-copy {
+  max-width: 460px;
+}
+
+.login-kicker {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  margin-bottom: 16px;
+}
+
+.login-LoginVeterinaria-title {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.login-LoginVeterinaria-desc {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Columna derecha */
+.login-panel {
+  background-color: #f8f7f4;
+  padding: 24px 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6b726e;
+  margin-bottom: 24px;
+}
+
+.login-portal-label {
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.login-security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #3d634c;
+  font-weight: 500;
+}
+
+.login-security-badge svg {
+  width: 15px;
+  height: 15px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+}
+
+.login-header h2 {
+  margin: 0 0 6px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #19221d;
+}
+
+.login-header p {
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  color: #5f6763;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #27312c;
+}
+
+.login-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #d5d8d5;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  color: #19221d;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: #2f5d42;
+  box-shadow: 0 0 0 3px rgba(47, 93, 66, 0.12);
+}
+
+.login-field input.input-error {
+  border-color: #c93b3b;
+}
+
+.login-error {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+  color: #c93b3b;
+}
+
+.login-info {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+  color: #2f5d42;
+}
+
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.84rem;
+}
+
+.login-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b544f;
+  cursor: pointer;
+}
+
+.login-remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #2f5d42;
+  cursor: pointer;
+}
+
+.login-forgot {
+  color: #2f5d42;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+.login-submit {
+  margin-top: 4px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f5d42;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background-color: #254b35;
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.login-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Roles */
+.login-roles-section {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e4e3df;
+}
+
+.login-roles-title {
+  margin: 0 0 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #7c8480;
+  text-transform: uppercase;
+}
+
+.login-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.login-role-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e3df;
+  border-radius: 10px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #2c3530;
+}
+
+.login-role-card svg {
+  width: 18px;
+  height: 18px;
+  color: #4f6759;
+}
+
+.login-roles-note {
+  margin: 12px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #7c8480;
+}
+
+/* Aviso inferior */
+.login-authorized-box {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background-color: #f1efe9;
+  border: 1px solid #e4e1d8;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.login-authorized-box svg {
+  width: 18px;
+  height: 18px;
+  color: #2f5d42;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.login-authorized-box strong {
+  display: block;
+  font-size: 0.82rem;
+  color: #1f2924;
+}
+
+.login-authorized-box p {
+  margin: 2px 0 0;
+  font-size: 0.76rem;
+  color: #676f6b;
+}
+
+.login-footer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #878f8b;
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-visual {
+    min-height: 290px;
+  }
+
+  .login-visual-overlay {
+    padding: 20px 24px 24px;
+  }
+
+  .login-LoginVeterinaria-title {
+    font-size: 1.75rem;
+  }
+
+  .login-panel {
+    padding: 24px 20px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -13,8 +13,14 @@ import {
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [usuario, setUsuario] = useState(null);
-  const [token, setToken] = useState(null);
+  
+  const [usuario, setUsuario] = useState({
+    nombre: "Sofía Ramírez",
+    correo: "sofia.ramirez@huellitas.pe",
+    rol: "recepcionista",
+    sede: "Miraflores"
+  });
+  const [token, setToken] = useState("token-prueba-recepcionista");
 
   async function login(correo, password) {
     const sesion = await iniciarSesion(correo, password);

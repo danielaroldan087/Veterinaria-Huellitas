@@ -7,9 +7,21 @@ import {
 } from "react-router-dom";
 
 import Login from "./pages/Login";
+import RecuperarPassword from "./pages/RecuperarPassword";
 import Panel from "./pages/Panel";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import { useAuth } from "./context/AuthContext";
+import PerfilRecepcion from "./pages/PerfilRecepcion";
+import CambiarPasswordRecepcion from "./pages/CambiarPasswordRecepcion";
+import InicioRecepcion from "./pages/InicioRecepcion";
+import PropietariosRecepcion from "./pages/PropietariosRecepcion";
+import RegistrarPropietarioRecepcion from "./pages/RegistrarPropietarioRecepcion";
+import MascotasRecepcion from "./pages/MascotasRecepcion";
+import RegistrarMascotaRecepcion from "./pages/RegistrarMascotaRecepcion";
+import AgendaRecepcion from "./pages/AgendaRecepcion";
+import ProgramarCitaRecepcion from "./pages/ProgramarCitaRecepcion";
+import ModificarCancelarCitaRecepcion from "./pages/ModificarCancelarCitaRecepcion";
+import BuscadorGeneralRecepcion from "./pages/BuscadorGeneralRecepcion";
 
 import "./App.css";
 
@@ -52,12 +64,24 @@ export default function App() {
 
         <Route path="/login" element={<Login />} />
 
+        <Route path="/recuperar-password" element={<RecuperarPassword />} />
+
         <Route element={<ProtectedRoute rolesPermitidos={["administrador"]} />}>
           <Route path="/administrador" element={<Panel />} />
         </Route>
 
         <Route element={<ProtectedRoute rolesPermitidos={["recepcionista"]} />}>
-          <Route path="/recepcionista" element={<Panel />} />
+          <Route path="/recepcionista" element={<PerfilRecepcion />} />
+          <Route path="/recepcionista/inicio" element={<InicioRecepcion />} />
+          <Route path="/recepcionista/cambiar-password" element={<CambiarPasswordRecepcion />} />
+          <Route path="/recepcionista/propietarios" element={<PropietariosRecepcion />} />
+          <Route path="/recepcionista/propietarios/nuevo" element={<RegistrarPropietarioRecepcion />} />
+          <Route path="/recepcionista/mascotas" element={<MascotasRecepcion />} />
+          <Route path="/recepcionista/mascotas/nueva" element={<RegistrarMascotaRecepcion />} />
+          <Route path="/recepcionista/agenda" element={<AgendaRecepcion />} />
+          <Route path="/recepcionista/agenda/nueva" element={<ProgramarCitaRecepcion />} />
+          <Route path="/recepcionista/agenda/gestionar" element={<ModificarCancelarCitaRecepcion />} />
+          <Route path="/recepcionista/buscador" element={<BuscadorGeneralRecepcion />} />
         </Route>
 
         <Route element={<ProtectedRoute rolesPermitidos={["veterinario"]} />}>

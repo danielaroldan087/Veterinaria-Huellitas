@@ -1,0 +1,305 @@
+.reg-prop-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.reg-prop-title {
+  margin: 0 0 4px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #161f1a;
+}
+
+.reg-prop-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #67706b;
+}
+
+.reg-prop-btn-back {
+  padding: 9px 15px;
+  border-radius: 9px;
+  border: 1px solid #e0e2df;
+  background-color: #ffffff;
+  color: #242d28;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.reg-prop-btn-back:hover {
+  background-color: #f4f3ef;
+}
+
+/* Grid principal */
+.reg-prop-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.05fr) minmax(275px, 0.95fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.reg-prop-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e5e0;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.reg-prop-card-header h2,
+.reg-prop-card h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+.reg-prop-card-header p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #7c8480;
+}
+
+/* Formulario */
+.reg-prop-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reg-prop-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.reg-prop-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reg-prop-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #26302b;
+}
+
+.reg-prop-field input,
+.reg-prop-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #ffffff;
+  font-size: 0.86rem;
+  color: #18211c;
+}
+
+.reg-prop-field input:focus,
+.reg-prop-field select:focus {
+  outline: none;
+  border-color: #2f5d42;
+  box-shadow: 0 0 0 3px rgba(47, 93, 66, 0.12);
+}
+
+.reg-prop-helper {
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+.reg-prop-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: #26302b;
+  cursor: pointer;
+}
+
+.reg-prop-checkbox input {
+  width: 15px;
+  height: 15px;
+  accent-color: #2f5d42;
+  cursor: pointer;
+}
+
+.reg-prop-form-footer {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #efeee9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reg-prop-required-note {
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+.reg-prop-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reg-prop-btn-cancel {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+  background-color: #f8f8f6;
+  color: #242d28;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reg-prop-btn-cancel:hover {
+  background-color: #efeee9;
+}
+
+.reg-prop-btn-submit {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2f5d42;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.reg-prop-btn-submit:hover {
+  background-color: #244a34;
+}
+
+.reg-prop-error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #c93b3b;
+}
+
+.reg-prop-success {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #2f5d42;
+  font-weight: 600;
+}
+
+/* Columna lateral derecha */
+.reg-prop-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reg-prop-family-icon {
+  margin: 14px 0 10px;
+  font-size: 1.05rem;
+  color: #6b736e;
+}
+
+.reg-prop-side-text {
+  margin: 0 0 16px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #5b645f;
+}
+
+.reg-prop-side-text.reg-prop-compact {
+  margin: 10px 0 0;
+}
+
+.reg-prop-next-step {
+  margin-bottom: 14px;
+}
+
+.reg-prop-next-label {
+  display: block;
+  font-size: 0.72rem;
+  color: #848c88;
+  margin-bottom: 3px;
+}
+
+.reg-prop-next-pet {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #18211c;
+}
+
+.reg-prop-side-footnote {
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.45;
+  color: #7c8480;
+}
+
+/* Banner azulado inferior derecho */
+.reg-prop-info-banner {
+  background-color: #eef3f7;
+  border: 1px solid #dce6ef;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.reg-prop-info-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid #5c768d;
+  color: #4a637a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.reg-prop-info-banner strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #263b4e;
+}
+
+.reg-prop-info-banner p {
+  margin: 2px 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: #466078;
+}
+
+@media (max-width: 980px) {
+  .reg-prop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .reg-prop-header-row,
+  .reg-prop-two-cols,
+  .reg-prop-form-footer {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

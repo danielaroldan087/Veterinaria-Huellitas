@@ -1,0 +1,266 @@
+.recep-shell {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f8f7f4;
+  color: #1c2420;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Barra lateral */
+.recep-sidebar {
+  width: 224px;
+  flex-shrink: 0;
+  background-color: #fbfaf8;
+  border-right: 1px solid #e6e5e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 16px;
+}
+
+.recep-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.recep-brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background-color: #2f5d42;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.recep-brand-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.recep-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.recep-brand-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #18211c;
+}
+
+.recep-brand-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: #777f7b;
+  margin-top: 2px;
+}
+
+.recep-nav-section {
+  margin: 0 0 10px 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #848c88;
+  text-transform: uppercase;
+}
+
+.recep-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recep-nav-item {
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #5b645f;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.recep-nav-item:hover,
+.recep-nav-item.is-active {
+  background-color: #eef2ec;
+  color: #1c2420;
+  font-weight: 600;
+}
+
+.recep-sidebar-bottom {
+  padding-top: 16px;
+  border-top: 1px solid #ecebe6;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recep-profile-link {
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #2f5d42;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recep-profile-link:hover,
+.recep-profile-link.is-active {
+  background-color: #e6efe9;
+}
+
+.recep-user-footer {
+  padding: 0 8px;
+}
+
+.recep-user-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1c2420;
+}
+
+.recep-user-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 0.74rem;
+  color: #7c8480;
+}
+
+.recep-logout-inline {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #7c8480;
+  font-size: 0.74rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.recep-logout-inline:hover {
+  color: #1c2420;
+}
+
+/* Área principal y topbar */
+.recep-main-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.recep-topbar {
+  height: 56px;
+  padding: 0 28px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e5e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.recep-context {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #6b736e;
+}
+
+.recep-context strong {
+  color: #18211c;
+  font-weight: 600;
+}
+
+.recep-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recep-date {
+  font-size: 0.78rem;
+  color: #7c8480;
+}
+
+.recep-icon-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #5b645f;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+}
+
+.recep-icon-btn:hover {
+  background-color: #f2f1ed;
+}
+
+/* Contenido y footer */
+.recep-content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 28px 32px;
+  box-sizing: border-box;
+}
+
+.recep-breadcrumb {
+  font-size: 0.74rem;
+  color: #848c88;
+  margin-bottom: 14px;
+}
+
+.recep-page-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #161f1a;
+}
+
+.recep-page-header p {
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+  color: #67706b;
+}
+
+.recep-footer {
+  margin-top: 24px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.72rem;
+  color: #848c88;
+}
+
+@media (max-width: 780px) {
+  .recep-shell {
+    flex-direction: column;
+  }
+
+  .recep-sidebar {
+    width: 100%;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: 1px solid #e6e5e0;
+  }
+}
