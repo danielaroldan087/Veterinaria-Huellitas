@@ -25,12 +25,14 @@ jobs:
       - name: Pruebas y cobertura
         run: |
           set -o pipefail
-          node --test --experimental-test-coverage --test-coverage-exclude='test/**' | tee cobertura.txt
+          npm run test:coverage | tee cobertura.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cobertura-backend
-          path: server/cobertura.txt
+          path: |
+            server/cobertura.txt
+            server/coverage/
           if-no-files-found: warn
   frontend:
     runs-on: ubuntu-latest
